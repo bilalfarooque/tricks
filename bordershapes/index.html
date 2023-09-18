@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 5%;
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            background-image: url(./nick-fewings-S7cyjr_3prc-unsplash.jpg);
+            background-size: cover;
+            margin: 10px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main div:nth-child(1) {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        .main div:nth-child(2) {
+            border-radius: 50%
+        }
+
+        .main div:nth-child(3) {
+            border-radius: 10px / 30px;
+        }
+
+        .main div:nth-child(4) {
+            border-radius: 160px 160px 0 0;
+        }
+
+        .main div:nth-child(5) {
+            border-radius: 0 40px 40px 0
+        }
+
+        .main div:nth-child(6) {}
+
+        .main div:nth-child(7) {
+            border-radius:
+        }
+
+        .main div:nth-child(8) {
+            border-radius:
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Border Radius</h1>
+
+    <div class="main">
+        <div class="square">box1</div>
+        <div class="square">box2</div>
+        <div class="square">box3</div>
+        <div class="square">box4</div>
+        <div class="square">box5</div>
+        <div class="square">box6</div>
+        <div class="square">box7</div>
+        <div class="square">box8</div>
+    </div>
+
+</body>
+
+</html>
