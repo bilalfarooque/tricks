@@ -1,80 +1,191 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .main {
-    padding: 5%;
-
+  padding: 5%;
 }
 
 .square {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
 }
 
+
+/* blink */
 .main div:nth-child(1) {
-    animation: anim1 2s ease 2s infinite normal forwards;
+  animation: anim1 2s ease 2s infinite normal forwards;
 }
 
 @keyframes anim1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
 
-    0%,
-    50%,
-    100% {
-        opacity: 1;
-    }
-
-    25%,
-    75% {
-        opacity: 0;
-    }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
+/* bounce */
 .main div:nth-child(2) {
-    border-radius: 50%;
-    animation: anim2 2s ease 2s infinite normal forwards;
+  border-radius: 50%;
+  animation: anim2 2s ease 2s infinite normal forwards;
 }
 
-@keyframes anim2{
-    0%  {
-        animation-timing-function: ease-in;
-        opacity: 0;
-        transform: translateY(-250px);
-    }
-    38%  {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    55%  {
-        animation-timing-function: ease-in;
-        transform: translateY(-65px);
-    }
-    72%  {
-        animation-timing-function: ease-out;
-        transform: translateY(0px);
-    }
-    81%  {
-        animation-timing-function: ease-in;
-        transform: translateY(-28px);
-    }
-    90%  {
-        animation-timing-function: ease-out;
-        transform: translateY(0px);
-    }
-    95%  {
-        animation-timing-function: ease-in;
-        transform: translateY(-8px);
-    }
-    100%  {
-        animation-timing-function: ease-out;
-        transform: translateY(0px);
-    }
+@keyframes anim2 {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
 }
+
+/*jello*/
+.main div:nth-child(3) {
+  animation: anim3 2s ease 0s infinite normal forwards;
+}
+
+@keyframes anim3 {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	40% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	50% {
+		transform: scale3d(0.85, 1.15, 1);
+	}
+
+	65% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	75% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+/* shake vertical */
+.main div:nth-child(4) {
+    animation: anim4 2s ease 0s infinite normal forwards;
+}
+
+@keyframes anim4 {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+}
+
+/* pulse */
+.main div:nth-child(5) {
+    animation: anim5 2s ease 0s infinite normal forwards;
+}
+
+@keyframes anim5 {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* background pan position focus */
+
+#box6{
+    background-image: url(../bordershapes/nick-fewings-S7cyjr_3prc-unsplash.jpg);
+}
+
+.main div:nth-child(6){
+    animation: anim6 2s ease 0s infinite normal forwards;
+
+}
+
+@keyframes anim6 {
+	0% {
+		background-position: 50% 0%;
+	}
+
+	100% {
+		background-position: 50% 100%;
+	}
+}
+
+
